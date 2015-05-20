@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -162,6 +162,40 @@
 Stepper Motor Driver</text>
 <text x="0" y="11.43" size="1.27" layer="21" align="center">&gt;NAME</text>
 </package>
+<package name="L6235">
+<pad name="DIAG" x="0" y="25.4" drill="0.6" diameter="1.016"/>
+<pad name="SENSEA" x="0" y="22.86" drill="0.6" diameter="1.016"/>
+<pad name="RCOFF" x="0" y="20.32" drill="0.6" diameter="1.016"/>
+<pad name="OUT1" x="0" y="17.78" drill="0.6" diameter="1.016"/>
+<pad name="GND" x="0" y="15.24" drill="0.6" diameter="1.016" shape="square"/>
+<pad name="GND1" x="0" y="12.7" drill="0.6" diameter="1.016" shape="square"/>
+<pad name="TACHO" x="0" y="10.16" drill="0.6" diameter="1.016"/>
+<pad name="RCPULSE" x="0" y="7.62" drill="0.6" diameter="1.016"/>
+<pad name="SENSEB" x="0" y="5.08" drill="0.6" diameter="1.016"/>
+<pad name="FWD/REV" x="0" y="2.54" drill="0.6" diameter="1.016"/>
+<pad name="EN" x="0" y="0" drill="0.6" diameter="1.016"/>
+<pad name="H3" x="7.62" y="27.94" drill="0.6" diameter="1.016"/>
+<pad name="H2" x="7.62" y="25.4" drill="0.6" diameter="1.016"/>
+<pad name="VCP" x="7.62" y="22.86" drill="0.6" diameter="1.016"/>
+<pad name="OUT2" x="7.62" y="20.32" drill="0.6" diameter="1.016"/>
+<pad name="VSA" x="7.62" y="17.78" drill="0.6" diameter="1.016"/>
+<pad name="GN3" x="7.62" y="15.24" drill="0.6" diameter="1.016" shape="square"/>
+<pad name="GND2" x="7.62" y="12.7" drill="0.6" diameter="1.016" shape="square"/>
+<pad name="VSB" x="7.62" y="10.16" drill="0.6" diameter="1.016"/>
+<pad name="OUT3" x="7.62" y="7.62" drill="0.6" diameter="1.016"/>
+<pad name="VBOOT" x="7.62" y="5.08" drill="0.6" diameter="1.016"/>
+<pad name="BRAKE" x="7.62" y="2.54" drill="0.6" diameter="1.016"/>
+<pad name="VREF" x="7.62" y="0" drill="0.6" diameter="1.016"/>
+<wire x1="-1.27" y1="29.845" x2="-1.27" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-1.905" x2="8.89" y2="-1.905" width="0.127" layer="21"/>
+<wire x1="8.89" y1="-1.905" x2="8.89" y2="29.845" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="29.845" x2="2.54" y2="29.845" width="0.127" layer="21"/>
+<wire x1="5.08" y1="29.845" x2="8.89" y2="29.845" width="0.127" layer="21"/>
+<wire x1="5.08" y1="29.845" x2="2.54" y2="29.845" width="0.127" layer="21" curve="-180"/>
+<pad name="H1" x="0" y="27.94" drill="0.6" diameter="1.016"/>
+<text x="3.81" y="31.115" size="1.27" layer="21" align="center">L6235N</text>
+<text x="3.81" y="-3.175" size="1.27" layer="21" align="center">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="NANO_HEADER">
@@ -242,6 +276,35 @@ Stepper Motor Driver</text>
 <text x="0" y="12.7" size="1.778" layer="94" align="center">&gt;NAME</text>
 <text x="0" y="-10.16" size="1.778" layer="94" align="center">Stepper Motor Driver</text>
 <text x="3.81" y="-7.62" size="1.778" layer="94" align="center">A4988</text>
+</symbol>
+<symbol name="L6235">
+<wire x1="0" y1="33.02" x2="25.4" y2="33.02" width="0.254" layer="94"/>
+<wire x1="25.4" y1="33.02" x2="25.4" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="25.4" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="33.02" width="0.254" layer="94"/>
+<pin name="H3" x="27.94" y="27.94" visible="pin" length="short" rot="R180"/>
+<pin name="H2" x="27.94" y="25.4" visible="pin" length="short" rot="R180"/>
+<pin name="VCP" x="27.94" y="22.86" visible="pin" length="short" rot="R180"/>
+<pin name="OUT2" x="27.94" y="20.32" visible="pin" length="short" rot="R180"/>
+<pin name="VSA" x="27.94" y="17.78" visible="pin" length="short" rot="R180"/>
+<pin name="VSB" x="27.94" y="12.7" visible="pin" length="short" rot="R180"/>
+<pin name="OUT3" x="27.94" y="10.16" visible="pin" length="short" rot="R180"/>
+<pin name="VBOOT" x="27.94" y="7.62" visible="pin" length="short" rot="R180"/>
+<pin name="VREF" x="27.94" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="BRAKE" x="27.94" y="5.08" visible="pin" length="short" rot="R180"/>
+<pin name="H1" x="-2.54" y="27.94" visible="pin" length="short"/>
+<pin name="DIAG" x="-2.54" y="25.4" visible="pin" length="short"/>
+<pin name="SENSEA" x="-2.54" y="22.86" visible="pin" length="short"/>
+<pin name="RCOFF" x="-2.54" y="20.32" visible="pin" length="short"/>
+<pin name="OUT1" x="-2.54" y="17.78" visible="pin" length="short"/>
+<pin name="GND" x="-2.54" y="15.24" visible="pin" length="short"/>
+<pin name="RCPULSE" x="-2.54" y="10.16" visible="pin" length="short"/>
+<pin name="TACHO" x="-2.54" y="12.7" visible="pin" length="short"/>
+<pin name="FWD/REV" x="-2.54" y="5.08" visible="pin" length="short"/>
+<pin name="SENSEB" x="-2.54" y="7.62" visible="pin" length="short"/>
+<pin name="EN" x="-2.54" y="2.54" visible="pin" length="short"/>
+<text x="12.7" y="30.48" size="1.6764" layer="94" align="center">L6235N</text>
+<text x="12.7" y="0" size="1.6764" layer="94" align="center">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -335,6 +398,41 @@ Stepper Motor Driver</text>
 <connect gate="G$1" pin="STEP" pad="STEP"/>
 <connect gate="G$1" pin="VDD" pad="VDD"/>
 <connect gate="G$1" pin="VMOT" pad="VMOT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="L6235">
+<gates>
+<gate name="G$1" symbol="L6235" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="L6235">
+<connects>
+<connect gate="G$1" pin="BRAKE" pad="BRAKE"/>
+<connect gate="G$1" pin="DIAG" pad="DIAG"/>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="FWD/REV" pad="FWD/REV"/>
+<connect gate="G$1" pin="GND" pad="GN3 GND GND1 GND2"/>
+<connect gate="G$1" pin="H1" pad="H1"/>
+<connect gate="G$1" pin="H2" pad="H2"/>
+<connect gate="G$1" pin="H3" pad="H3"/>
+<connect gate="G$1" pin="OUT1" pad="OUT1"/>
+<connect gate="G$1" pin="OUT2" pad="OUT2"/>
+<connect gate="G$1" pin="OUT3" pad="OUT3"/>
+<connect gate="G$1" pin="RCOFF" pad="RCOFF"/>
+<connect gate="G$1" pin="RCPULSE" pad="RCPULSE"/>
+<connect gate="G$1" pin="SENSEA" pad="SENSEA"/>
+<connect gate="G$1" pin="SENSEB" pad="SENSEB"/>
+<connect gate="G$1" pin="TACHO" pad="TACHO"/>
+<connect gate="G$1" pin="VBOOT" pad="VBOOT"/>
+<connect gate="G$1" pin="VCP" pad="VCP"/>
+<connect gate="G$1" pin="VREF" pad="VREF"/>
+<connect gate="G$1" pin="VSA" pad="VSA"/>
+<connect gate="G$1" pin="VSB" pad="VSB"/>
 </connects>
 <technologies>
 <technology name=""/>
